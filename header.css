@@ -1,0 +1,29 @@
+
+header{
+    background-color:slateblue;
+    margin: 0;
+    padding:0;
+    display: flex;
+    align-items: center;
+}
+a{
+    display: inline;
+    position: relative;
+    margin: 20px;
+    padding: 100%x;
+    color: azure;
+    text-decoration: none;
+    
+}
+.logo{
+
+    width: 150px;
+    height: 100px;
+    line-height: 25px;
+    background-color: blue;
+    color:azure;
+    font-family: sans-serif;
+    font-size: 25px;
+    border-radius: 30px;
+    text-align: center;
+}
