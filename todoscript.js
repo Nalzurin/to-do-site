@@ -101,20 +101,26 @@ function displayData() {
       // Create a list item, h3, and p to put each data item inside when displaying it
       // structure the HTML fragment, and append it inside the list
       const listItem = document.createElement("div");
+      const descFolder = document.createElement("div");
       const h3 = document.createElement("h3");
-      const para = document.createElement("p");
+      const desc = document.createElement("p");
 
       listItem.appendChild(h3);
-      listItem.appendChild(para);
+      listItem.appendChild(descFolder);
+      descFolder.appendChild(desc);
       list.appendChild(listItem);
 
-      // Put the data from the cursor inside the h3 and para
+      // Put the data from the cursor inside the h3 and desc
       h3.textContent = cursor.value.title;
-      para.textContent = cursor.value.body;
+      desc.textContent = cursor.value.description;
 
       // Store the ID of the data item inside an attribute on the listItem, so we know
       // which item it corresponds to. This will be useful later when we want to delete items
       listItem.setAttribute("data-note-id", cursor.value.id);
+      listItem.setAttribute("onclick", "DescWindowToggle("+cursor.value.id+")");
+      descFolder.setAttribute("class", "descfolder");
+
+      h3.setAttribute("class", "noteItemTitle")
 
       // Create a button and place it inside each listItem
       const deleteBtn = document.createElement("button");
