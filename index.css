@@ -23,3 +23,56 @@ body{
     background-color: violet;
 
 }
+.opaque{
+    z-index: 5;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    background-color: rgba(255,255,255,0.75);
+}
+
+.addwindow{
+    margin:auto;
+    margin-top:5%;
+    width: 30%;
+    height: 25vw;
+    color: azure;
+    background-color: slateblue;
+    border: solid 5px black;
+    border-radius: 15px;
+}
+form{
+    display:flex;
+    flex-direction: column;
+}
+form h1{
+    margin:auto;
+    margin-top: 3%;
+}
+form label{
+    font-size: 25px;
+    margin-top: 5%;
+    margin-bottom: 2.5%;
+    margin-left: 5%;
+}
+form input, textarea{
+    width: 80%;
+    margin:auto;
+}
+input[type=submit]{
+    margin-top: 5%;
+    height: 40px;
+    font-size: 25px;
+    background-color: blue;
+    color: Azure;
+    border:none;
+    border-radius: 15px;
+    
+}
+input[type=submit]:hover{
+    background-color: rgb(0,0,127);
+}
+input[type=submit]:active{
+    background-color: rgb(0,0,55);
+}
