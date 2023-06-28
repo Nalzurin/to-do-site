@@ -26,5 +26,25 @@ openRequest.addEventListener("success", () => {
   db = openRequest.result;
 
   // Run the displayData() function to display the notes already in the IDB
-  displayData();
+  //displayData();
 });
+
+// Set up the database tables if this has not already been done
+openRequest.addEventListener("upgradeneeded", (e) => {
+  // Grab a reference to the opened database
+  db = e.target.result;
+
+  // Create an objectStore in our database to store notes and an auto-incrementing key
+  // An objectStore is similar to a 'table' in a relational database
+  const objectStore = db.createObjectStore("todolist_os", {
+    keyPath: "id",
+    autoIncrement: true,
+  });
+
+  // Define what data items the objectStore will contain
+  objectStore.createIndex("title", "title", { unique: false });
+  objectStore.createIndex("description", "description", { unique: false });
+
+  console.log("Database setup complete");
+});
+
