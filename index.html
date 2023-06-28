@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="header.css">
     <script src="https://kit.fontawesome.com/158bf01e1f.js" crossorigin="anonymous"></script>
+    <script src="showadd.js"></script>
+
     <title>To Do List</title>
 </head>
 
@@ -19,30 +21,31 @@
             <h1>About</h1>
         </a>
     </header>
-    <div class="ToDoList">
-        <h1>Test</h1>
+    <div id="notelist" class="ToDoList">
+        
 
 
     </div>
 
 
     <div class="add">
-        <button><i class="fa-solid fa-plus fa-3x" style="color: #ffffff;"></i></button>
+        <button id="addbutton" onclick="ShowAddWindow()"><i class="fa-solid fa-plus fa-3x" style="color: #ffffff;"></i></button>
     </div>
-    <div class="opaque">
+    <div id="addoverlay" class="addoverlay">
         <div class="addwindow">
-            <form>
+            <form id="AddForm">
                 <h1>Add new To Do note</h1>
                 <label for="title">Title</label>
-                <input id="title" type="text">
+                <input id="titleInput"type="text">
                 <label for="desc">Description</label>
-                <textarea id="desc" type="text"></textarea>
+                <textarea id="descInput"type="text"></textarea>
                 <input type="submit" value="Add Note" >
             </form>
 
         </div>
     </div>
     <script src="todoscript.js"></script>
+
 </body>
 
 </html>

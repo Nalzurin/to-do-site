@@ -23,7 +23,8 @@ body{
     background-color: violet;
 
 }
-.opaque{
+#addoverlay{
+    display: none;
     z-index: 5;
     position: absolute;
     top:0;
